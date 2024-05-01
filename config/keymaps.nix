@@ -27,6 +27,16 @@
       };
     }
 
+    # Terminal
+    {
+      mode = "t";
+      key = "<C-x>";
+      action = "<C-\\><C-N>";
+      options = {
+        desc = "Escape terminal mode";
+      };
+    }
+
     #BufferLine
     {
       mode = "n";
