@@ -17,7 +17,10 @@
 
     nvim-autopairs.enable = true;
 
-    nvim-tree.enable = true;
+    nvim-tree = {
+      enable = true;
+      autoClose = true;
+    };
 
     lsp = {
       enable = true;
