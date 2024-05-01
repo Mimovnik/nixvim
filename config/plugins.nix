@@ -22,6 +22,8 @@
 
     nvim-autopairs.enable = true;
 
+    comment.enable = true;
+
     gitsigns.enable = true;
 
     telescope = {

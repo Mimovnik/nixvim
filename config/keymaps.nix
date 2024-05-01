@@ -50,6 +50,25 @@
       };
     }
 
+    # Comments
+    {
+      mode = "n";
+      key = "<leader>/";
+      action = "<Esc><cmd>lua require('Comment.api').toggle.linewise.current()<cr>";
+      options = {
+        desc = "Toggle comment";
+      };
+    }
+
+    {
+      mode = "v";
+      key = "<leader>/";
+      action = "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>";
+      options = {
+        desc = "Toggle comment";
+      };
+    }
+
     # Conform
     {
       mode = "n";
