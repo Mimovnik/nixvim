@@ -10,6 +10,12 @@
       action = "+code";
     }
 
+    {
+      mode = "n";
+      key = "<leader>b";
+      action = "+buffer";
+    }
+
     # Conform
     {
       mode = "n";
@@ -40,34 +46,12 @@
       };
     }
 
-    # Tabs
     {
       mode = "n";
-      key = "<leader><tab>l";
-      action = "<cmd>tablast<cr>";
+      key = "<S-Tab>";
+      action = "<cmd>bdelete<cr>";
       options = {
-        silent = true;
-        desc = "Last tab";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader><tab>f";
-      action = "<cmd>tabfirst<cr>";
-      options = {
-        silent = true;
-        desc = "First Tab";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader><tab><tab>";
-      action = "<cmd>tabnew<cr>";
-      options = {
-        silent = true;
-        desc = "New Tab";
+        desc = "Delete buffer";
       };
     }
 
@@ -98,6 +82,16 @@
       action = "<cmd>NvimTreeFocus<cr>";
       options = {
         desc = "Focus file explorer";
+      };
+    }
+
+    # Clear highlights
+    {
+      mode = ["n"];
+      key = "<Esc>";
+      action = "<cmd>noh<CR>";
+      options = {
+        desc = "Clear highlights";
       };
     }
 
