@@ -17,6 +17,16 @@
 
     nvim-autopairs.enable = true;
 
+
+    telescope = {
+      enable = true;
+      settings.defaults = {
+        layout_config = {
+          prompt_position = "top";
+        };
+      };
+    };
+
     nvim-tree = {
       enable = true;
       autoClose = true;

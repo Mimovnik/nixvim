@@ -16,6 +16,40 @@
       action = "+buffer";
     }
 
+    {
+      mode = "n";
+      key = "<leader>f";
+      action = "+find";
+    }
+
+    # Telescope
+    {
+      mode = "n";
+      key = "<leader>ff";
+      action = "<cmd>Telescope find_files<CR>";
+      options = {
+        desc = "Find files";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>fb";
+      action = "<cmd>Telescope buffers<CR>";
+      options = {
+        desc = "Find in buffers";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>fg";
+      action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
+      options = {
+        desc = "Find in current buffer";
+      };
+    }
+
     # Conform
     {
       mode = "n";
