@@ -2,6 +2,26 @@
   globals.mapleader = " ";
 
   keymaps = [
+    # WhichKey prefixes
+
+    {
+      mode = "n";
+      key = "<leader>c";
+      action = "+code";
+    }
+
+    # Conform
+    {
+      mode = "n";
+      key = "<leader>cf";
+      action = "<cmd>lua require('conform').format()<cr>";
+      options = {
+        silent = true;
+        desc = "Format Buffer";
+      };
+    }
+
+    #BufferLine
     {
       mode = "n";
       key = "<Tab>";
@@ -51,6 +71,7 @@
       };
     }
 
+    # Save with ctrl-s
     {
       mode = "n";
       key = "<C-s>";
@@ -61,15 +82,26 @@
       };
     }
 
+    # nvim-tree
     {
       mode = "n";
-      key = "<leader>e";
-      action = "<cmd>CHADopen<cr>";
+      key = "<C-n>";
+      action = "<cmd>NvimTreeToggle<cr>";
       options = {
-        desc = "Toggle CHADTree";
+        desc = "Toggle file explorer";
       };
     }
 
+    {
+      mode = "n";
+      key = "<leader>e";
+      action = "<cmd>NvimTreeFocus<cr>";
+      options = {
+        desc = "Focus file explorer";
+      };
+    }
+
+    # System clipboard
     {
       mode = ["n" "v"];
       key = "<leader>y";
@@ -95,6 +127,43 @@
       action = "\"_d";
       options = {
         desc = "Delete to void register";
+      };
+    }
+
+    # Window movement
+    {
+      mode = "n";
+      key = "<C-h>";
+      action = "<C-w>h";
+      options = {
+        desc = "Switch to window on left";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<C-l>";
+      action = "<C-w>l";
+      options = {
+        desc = "Switch to window on right";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<C-j>";
+      action = "<C-w>j";
+      options = {
+        desc = "Switch to window down";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<C-k>";
+      action = "<C-w>k";
+      options = {
+        desc = "Switch to window up";
       };
     }
 
