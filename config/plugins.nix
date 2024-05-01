@@ -11,7 +11,12 @@
       ];
     };
 
-    lualine.enable = true;
+    lualine = {
+      enable = true;
+      ignoreFocus = [
+        "NvimTree"
+      ];
+    };
 
     which-key.enable = true;
 
