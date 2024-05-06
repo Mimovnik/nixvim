@@ -1,6 +1,15 @@
 {
   globals.mapleader = " ";
 
+  # Lsp
+  plugins.lsp.keymaps.lspBuf = {
+    "K" = "hover";
+    "gd" = "definition";
+    "<leader>sh" = "signature_help";
+    "<leader>sr" = "references";
+    "<leader>ca" = "code_action";
+  };
+
   keymaps = [
     # WhichKey prefixes
 
@@ -20,6 +29,37 @@
       mode = "n";
       key = "<leader>f";
       action = "+find";
+    }
+
+    # Lsp
+    {
+      mode = "n";
+      key = "K";
+      action = "+Lsp hover";
+    }
+
+    {
+      mode = "n";
+      key = "gd";
+      action = "+Go to definition";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>sh";
+      action = "+Show signature help";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>sr";
+      action = "+Show references";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>ca";
+      action = "+Code action";
     }
 
     # Telescope
