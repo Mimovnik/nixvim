@@ -151,8 +151,8 @@
 
     {
       mode = "n";
-      key = "<S-Tab>";
-      action = "<cmd>bdelete<cr>";
+      key = "<leader>bd";
+      action = "<cmd>Bdelete<cr>";
       options = {
         desc = "Delete buffer";
       };
