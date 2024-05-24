@@ -217,6 +217,15 @@
       };
     }
 
+    {
+      mode = ["n" "v"];
+      key = "<leader>p";
+      action = "\"+p";
+      options = {
+        desc = "Paste from system clipboard";
+      };
+    }
+
     # Delete to void register
     {
       mode = ["n" "v"];
