@@ -1,0 +1,32 @@
+{...}: {
+  imports = [
+    ./bufdelete.nix
+    ./bufferline.nix
+    ./cmp.nix
+    ./conform-nvim.nix
+    ./dap.nix
+    ./hardtime.nix
+    ./lsp.nix
+    ./lualine.nix
+    ./notify.nix
+    ./nvim-tree.nix
+    ./telescope.nix
+    ./toggleterm.nix
+  ];
+
+  plugins = {
+    which-key.enable = true;
+
+    nvim-autopairs.enable = true;
+
+    comment.enable = true;
+
+    gitsigns.enable = true;
+
+    luasnip.enable = true;
+
+    oil.enable = true;
+
+    treesitter.enable = true;
+  };
+}

@@ -2,7 +2,7 @@
   imports = [
     ./keymaps.nix
     ./opts.nix
-    ./plugins.nix
+    ./plugins
   ];
 
   colorschemes.base16 = {
