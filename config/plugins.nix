@@ -1,5 +1,17 @@
 {pkgs, ...}: {
   plugins = {
+    which-key.enable = true;
+
+    nvim-autopairs.enable = true;
+
+    comment.enable = true;
+
+    gitsigns.enable = true;
+
+    luasnip.enable = true;
+
+    oil.enable = true;
+
     hardtime = {
       enable = true;
       enabled = true;
@@ -51,14 +63,6 @@
         "NvimTree"
       ];
     };
-
-    which-key.enable = true;
-
-    nvim-autopairs.enable = true;
-
-    comment.enable = true;
-
-    gitsigns.enable = true;
 
     telescope = {
       enable = true;
