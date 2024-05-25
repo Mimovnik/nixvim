@@ -109,7 +109,7 @@
 
     {
       mode = "n";
-      key = "<leader>c";
+      key = "<leader>dc";
       action = "<cmd>DapContinue<cr>";
       options = {
         silent = true;
@@ -216,16 +216,6 @@
       options = {
         silent = true;
         desc = "Pause";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>drp";
-      action = "<cmd>DapToggleRepl<cr>";
-      options = {
-        silent = true;
-        desc = "Toggle REPL";
       };
     }
 
