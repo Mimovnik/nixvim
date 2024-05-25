@@ -4,39 +4,11 @@
   # Lsp
   plugins.lsp.keymaps.lspBuf = {
     "K" = "hover";
-    "gd" = "definition";
-    "<leader>sh" = "signature_help";
-    "<leader>sr" = "references";
-    "<leader>ca" = "code_action";
+    "<leader>a" = "code_action";
+    "<leader>r" = "rename";
   };
 
   keymaps = [
-    # WhichKey prefixes
-
-    {
-      mode = "n";
-      key = "<leader>c";
-      action = "+code";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>b";
-      action = "+buffer";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>f";
-      action = "+find";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>d";
-      action = "+debug";
-    }
-
     # Lsp
     {
       mode = "n";
@@ -46,29 +18,63 @@
 
     {
       mode = "n";
-      key = "gd";
-      action = "+Go to definition";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>sh";
-      action = "+Show signature help";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>sr";
-      action = "+Show references";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>ca";
+      key = "<leader>a";
       action = "+Code action";
     }
 
+    {
+      mode = "n";
+      key = "<leader>r";
+      action = "+Rename";
+    }
+
+    {
+      mode = "n";
+      key = "gd";
+      action = "<cmd>Telescope lsp_definitions";
+      options = {
+        desc = "Go to definitions";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "gr";
+      action = "<cmd>Telescope lsp_references";
+      options = {
+        desc = "Go to references";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "gI";
+      action = "<cmd>Telescope lsp_implementations";
+      options = {
+        desc = "Go to implementations";
+      };
+    }
+
+    # Quickfixlist
+    {
+      mode = "n";
+      key = "<C-k>";
+      action = "<cmd>cnext<CR>zz";
+    }
+
+    {
+      mode = "n";
+      key = "<C-j>";
+      action = "<cmd>cprev<CR>zz";
+    }
+
     # Dap
+    {
+      mode = "n";
+      key = "<leader>d";
+      action = "+Debbuger";
+    }
+
     {
       mode = "n";
       key = "<leader>dB";
@@ -80,33 +86,77 @@
         desc = "Breakpoint Condition";
       };
     }
+
     {
       mode = "n";
       key = "<leader>db";
-      action = ":DapToggleBreakpoint<cr>";
+      action = "<cmd>DapToggleBreakpoint<cr>";
       options = {
         silent = true;
         desc = "Toggle Breakpoint";
       };
     }
+
     {
       mode = "n";
-      key = "<leader>dc";
-      action = ":DapContinue<cr>";
-      options = {
-        silent = true;
-        desc = "Continue";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>da";
+      key = "<leader>dr";
       action = "<cmd>lua require('dap').continue({ before = get_args })<cr>";
       options = {
         silent = true;
         desc = "Run with Args";
       };
     }
+
+    {
+      mode = "n";
+      key = "<leader>c";
+      action = "<cmd>DapContinue<cr>";
+      options = {
+        silent = true;
+        desc = "Debbuger Continue";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>n";
+      action = "<cmd>DapStepOver<cr>";
+      options = {
+        silent = true;
+        desc = "Debbuger Step Over (next)";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>s";
+      action = "<cmd>DapStepInto<cr>";
+      options = {
+        silent = true;
+        desc = "Debbuger Step into (step)";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>dt";
+      action = "<cmd>DapTerminate<cr>";
+      options = {
+        silent = true;
+        desc = "Terminate";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>do";
+      action = "<cmd>DapStepOut<cr>";
+      options = {
+        silent = true;
+        desc = "Step Out";
+      };
+    }
+
     {
       mode = "n";
       key = "<leader>dC";
@@ -116,6 +166,7 @@
         desc = "Run to cursor";
       };
     }
+
     {
       mode = "n";
       key = "<leader>dg";
@@ -125,15 +176,7 @@
         desc = "Go to line (no execute)";
       };
     }
-    {
-      mode = "n";
-      key = "<leader>di";
-      action = ":DapStepInto<cr>";
-      options = {
-        silent = true;
-        desc = "Step into";
-      };
-    }
+
     {
       mode = "n";
       key = "<leader>dj";
@@ -145,6 +188,7 @@
         desc = "Down";
       };
     }
+
     {
       mode = "n";
       key = "<leader>dk";
@@ -154,6 +198,7 @@
         desc = "Up";
       };
     }
+
     {
       mode = "n";
       key = "<leader>dl";
@@ -163,24 +208,7 @@
         desc = "Run Last";
       };
     }
-    {
-      mode = "n";
-      key = "<leader>do";
-      action = ":DapStepOut<cr>";
-      options = {
-        silent = true;
-        desc = "Step Out";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>dO";
-      action = ":DapStepOver<cr>";
-      options = {
-        silent = true;
-        desc = "Step Over";
-      };
-    }
+
     {
       mode = "n";
       key = "<leader>dp";
@@ -190,15 +218,17 @@
         desc = "Pause";
       };
     }
+
     {
       mode = "n";
       key = "<leader>dr";
-      action = ":DapToggleRepl<cr>";
+      action = "<cmd>DapToggleRepl<cr>";
       options = {
         silent = true;
         desc = "Toggle REPL";
       };
     }
+
     {
       mode = "n";
       key = "<leader>ds";
@@ -208,15 +238,7 @@
         desc = "Session";
       };
     }
-    {
-      mode = "n";
-      key = "<leader>dt";
-      action = ":DapTerminate<cr>";
-      options = {
-        silent = true;
-        desc = "Terminate";
-      };
-    }
+
     {
       mode = "n";
       key = "<leader>du";
@@ -226,6 +248,7 @@
         desc = "Dap UI";
       };
     }
+
     {
       mode = "n";
       key = "<leader>dw";
@@ -235,6 +258,7 @@
         desc = "Widgets";
       };
     }
+
     {
       mode = ["n" "v"];
       key = "<leader>de";
@@ -246,6 +270,30 @@
     }
 
     # Telescope
+    {
+      mode = "n";
+      key = "<leader>f";
+      action = "+Find";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>fh";
+      action = "<cmd>Telescope help_tags<CR>";
+      options = {
+        desc = "Find help";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>fk";
+      action = "<cmd>Telescope keymaps<CR>";
+      options = {
+        desc = "Find keymaps";
+      };
+    }
+
     {
       mode = "n";
       key = "<leader>ff";
@@ -260,7 +308,7 @@
       key = "<leader>fb";
       action = "<cmd>Telescope buffers<CR>";
       options = {
-        desc = "Find in buffers";
+        desc = "Find buffers";
       };
     }
 
@@ -270,6 +318,40 @@
       action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
       options = {
         desc = "Find in current buffer";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>fw";
+      action = "<cmd>Telescope grep_string<CR>";
+      options = {
+        desc = "Find word under cursor in all files";
+      };
+    }
+
+    # Git
+    {
+      mode = "n";
+      key = "<leader>g";
+      action = "+Git";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>gs";
+      action = "<cmd>Telescope git_status<CR>";
+      options = {
+        desc = "Show git status (with diff preview)";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>gc";
+      action = "<cmd>Telescope git_commits<CR>";
+      options = {
+        desc = "Show git commits and diff preview";
       };
     }
 
@@ -334,10 +416,10 @@
 
     {
       mode = "n";
-      key = "<leader>bd";
+      key = "<leader>x";
       action = "<cmd>Bdelete<cr>";
       options = {
-        desc = "Delete buffer";
+        desc = "Delete current buffer";
       };
     }
 
@@ -404,6 +486,15 @@
       mode = ["n" "v"];
       key = "<leader>p";
       action = "\"+p";
+      options = {
+        desc = "Paste from system clipboard";
+      };
+    }
+
+    {
+      mode = ["n" "v"];
+      key = "<leader>P";
+      action = "\"+P";
       options = {
         desc = "Paste from system clipboard";
       };

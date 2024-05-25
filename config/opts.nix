@@ -3,8 +3,6 @@
     number = true;
     relativenumber = true;
 
-    timeoutlen = 100;
-
     # Set tabs to 2 spaces
     tabstop = 2;
     softtabstop = 2;
@@ -31,7 +29,19 @@
     grepformat = "%f:%l:%c:%m";
 
     # Decrease updatetime
-    updatetime = 50; # faster completion (4000ms default)
+    updatetime = 250;
+
+    # Displays which-key popup sooner
+    timeoutlen = 100;
+
+    # Show which line your cursor is on
+    cursorline = true;
+
+    # Minimal number of screen lines to keep above and below the cursor.
+    scrolloff = 10;
+
+    # Keep signcolumn on by default
+    signcolumn = "yes";
 
     # Set completeopt to have a better completion experience
     completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
