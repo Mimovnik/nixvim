@@ -31,7 +31,7 @@
     {
       mode = "n";
       key = "gd";
-      action = "<cmd>Telescope lsp_definitions";
+      action = "<cmd>Telescope lsp_definitions<CR>";
       options = {
         desc = "Go to definitions";
       };
@@ -40,7 +40,7 @@
     {
       mode = "n";
       key = "gr";
-      action = "<cmd>Telescope lsp_references";
+      action = "<cmd>Telescope lsp_references<CR>";
       options = {
         desc = "Go to references";
       };
@@ -49,7 +49,7 @@
     {
       mode = "n";
       key = "gI";
-      action = "<cmd>Telescope lsp_implementations";
+      action = "<cmd>Telescope lsp_implementations<CR>";
       options = {
         desc = "Go to implementations";
       };
