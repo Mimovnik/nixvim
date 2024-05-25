@@ -30,6 +30,24 @@
 
     {
       mode = "n";
+      key = "<C-n>";
+      action = "<cmd>lua vim.diagnostic.goto_next()<CR>";
+      options = {
+        desc = "Go to next diagnostic";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<C-p>";
+      action = "<cmd>lua vim.diagnostic.goto_prev()<CR>";
+      options = {
+        desc = "Go to previous diagnostic";
+      };
+    }
+
+    {
+      mode = "n";
       key = "gd";
       action = "<cmd>Telescope lsp_definitions<CR>";
       options = {
@@ -373,6 +391,12 @@
     # Conform
     {
       mode = "n";
+      key = "<leader>c";
+      action = "+Conform";
+    }
+
+    {
+      mode = "n";
       key = "<leader>cf";
       action = "<cmd>lua require('conform').format()<cr>";
       options = {
@@ -410,6 +434,7 @@
       };
     }
 
+    # Bufdelete
     {
       mode = "n";
       key = "<leader>x";
@@ -419,33 +444,13 @@
       };
     }
 
-    # Save with ctrl-s
-    {
-      mode = "n";
-      key = "<C-s>";
-      action = "<cmd>w<cr><esc>";
-      options = {
-        silent = true;
-        desc = "Save file";
-      };
-    }
-
     # nvim-tree
     {
       mode = "n";
-      key = "<C-n>";
+      key = "<leader>e";
       action = "<cmd>NvimTreeToggle<cr>";
       options = {
         desc = "Toggle file explorer";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>e";
-      action = "<cmd>NvimTreeFocus<cr>";
-      options = {
-        desc = "Focus file explorer";
       };
     }
 
