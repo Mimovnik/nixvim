@@ -1,37 +1,39 @@
 {
   globals.mapleader = " ";
 
-  # Lsp
-  plugins.lsp.keymaps.lspBuf = {
-    "K" = "hover";
-    "<leader>a" = "code_action";
-    "<leader>r" = "rename";
-  };
-
   keymaps = [
     # Lsp
     {
       mode = "n";
       key = "K";
-      action = "+Lsp hover";
+      action = "<cmd>Lspsaga hover_doc<CR>";
+      options = {
+        desc = "Hover documentation";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>a";
-      action = "+Code action";
+      action = "<cmd>Lspsaga code_action<CR>";
+      options = {
+        desc = "Code action";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>r";
-      action = "+Rename";
+      action = "<cmd>Lspsaga rename<CR>";
+      options = {
+        desc = "Rename";
+      };
     }
 
     {
       mode = "n";
       key = "<C-n>";
-      action = "<cmd>lua vim.diagnostic.goto_next()<CR>";
+      action = "<cmd>Lspsaga diagnostic_jump_next<CR>";
       options = {
         desc = "Go to next diagnostic";
       };
@@ -40,7 +42,7 @@
     {
       mode = "n";
       key = "<C-p>";
-      action = "<cmd>lua vim.diagnostic.goto_prev()<CR>";
+      action = "<cmd>Lspsaga diagnostic_jump_prev<CR>";
       options = {
         desc = "Go to previous diagnostic";
       };
@@ -49,7 +51,7 @@
     {
       mode = "n";
       key = "gd";
-      action = "<cmd>Telescope lsp_definitions<CR>";
+      action = "<cmd>Lspsaga finder def<CR>";
       options = {
         desc = "Go to definitions";
       };
@@ -58,7 +60,7 @@
     {
       mode = "n";
       key = "gr";
-      action = "<cmd>Telescope lsp_references<CR>";
+      action = "<cmd>Lspsaga finder ref<CR>";
       options = {
         desc = "Go to references";
       };
@@ -67,7 +69,7 @@
     {
       mode = "n";
       key = "gI";
-      action = "<cmd>Telescope lsp_implementations<CR>";
+      action = "<cmd>Lspsaga finder imp<CR>";
       options = {
         desc = "Go to implementations";
       };

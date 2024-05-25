@@ -36,7 +36,7 @@
     updatetime = 250;
 
     # Displays which-key popup sooner
-    timeoutlen = 100;
+    timeoutlen = 0;
 
     # Show which line your cursor is on
     cursorline = true;

@@ -7,6 +7,7 @@
     ./dap.nix
     ./hardtime.nix
     ./lsp.nix
+    ./lspsaga.nix
     ./lualine.nix
     ./notify.nix
     ./nvim-tree.nix
