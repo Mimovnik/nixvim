@@ -22,6 +22,10 @@
     # Enable mouse mode
     mouse = "a"; # Mouse
 
+    # Configure how new splits should be opened
+    splitright = true;
+    splitbelow = true;
+
     # Enable ignorecase + smartcase for better searching
     ignorecase = true;
     smartcase = true; # Don't ignore case with capitals
