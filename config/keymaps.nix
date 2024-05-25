@@ -58,13 +58,13 @@
     # Quickfixlist
     {
       mode = "n";
-      key = "<C-k>";
+      key = "<leader>k";
       action = "<cmd>cnext<CR>zz";
     }
 
     {
       mode = "n";
-      key = "<C-j>";
+      key = "<leader>j";
       action = "<cmd>cprev<CR>zz";
     }
 
@@ -221,7 +221,7 @@
 
     {
       mode = "n";
-      key = "<leader>dr";
+      key = "<leader>drp";
       action = "<cmd>DapToggleRepl<cr>";
       options = {
         silent = true;
