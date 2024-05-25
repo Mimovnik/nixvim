@@ -58,14 +58,20 @@
     # Quickfixlist
     {
       mode = "n";
-      key = "<leader>k";
+      key = "<leader>j";
       action = "<cmd>cnext<CR>zz";
+      options = {
+        desc = "Go to next item from quickfix list";
+      };
     }
 
     {
       mode = "n";
-      key = "<leader>j";
+      key = "<leader>k";
       action = "<cmd>cprev<CR>zz";
+      options = {
+        desc = "Go to previous item from quickfix list";
+      };
     }
 
     # Dap
