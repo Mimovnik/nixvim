@@ -330,7 +330,7 @@
 
     {
       mode = "n";
-      key = "<leader>fg";
+      key = "<leader>fc";
       action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
       options = {
         desc = "Find in current buffer";
@@ -340,9 +340,18 @@
     {
       mode = "n";
       key = "<leader>fw";
+      action = "<cmd>Telescope live_grep<CR>";
+      options = {
+        desc = "Find word in all files";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>fs";
       action = "<cmd>Telescope grep_string<CR>";
       options = {
-        desc = "Find word under cursor in all files";
+        desc = "Find string under cursor in all files";
       };
     }
 
