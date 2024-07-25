@@ -5,7 +5,6 @@
     ./cmp.nix
     ./conform-nvim.nix
     ./dap.nix
-    ./hardtime.nix
     ./lsp.nix
     ./lspsaga.nix
     ./lualine.nix
