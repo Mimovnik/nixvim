@@ -1,9 +1,11 @@
 {
   plugins.conform-nvim = {
     enable = true;
-    notifyOnError = true;
-    formattersByFt = {
-      nix = ["alejandra"];
+    settings = {
+      notify_on_error = true;
+      formatters_by_ft = {
+        nix = ["alejandra"];
+      };
     };
   };
 }

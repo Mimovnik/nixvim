@@ -12,9 +12,12 @@
     ./nvim-tree.nix
     ./telescope.nix
     ./toggleterm.nix
+    ./treesitter.nix
   ];
 
   plugins = {
+    web-devicons.enable = true;
+
     which-key.enable = true;
 
     nvim-autopairs.enable = true;

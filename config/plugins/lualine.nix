@@ -1,7 +1,7 @@
 {
   plugins.lualine = {
     enable = true;
-    ignoreFocus = [
+    settings.options.ignore_focus = [
       "NvimTree"
     ];
   };
