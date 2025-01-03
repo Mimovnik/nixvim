@@ -27,9 +27,5 @@
     gitsigns.enable = true;
 
     luasnip.enable = true;
-
-    oil.enable = true;
-
-    treesitter.enable = true;
   };
 }
