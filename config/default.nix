@@ -3,10 +3,6 @@
     ./keymaps.nix
     ./opts.nix
     ./plugins
+    ./colorscheme.nix
   ];
-
-  colorschemes.base16 = {
-    enable = true;
-    colorscheme = "onedark";
-  };
 }
