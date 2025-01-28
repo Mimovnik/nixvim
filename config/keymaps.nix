@@ -399,20 +399,30 @@
       };
     }
 
-    # Conform
+    # Utils
     {
       mode = "n";
-      key = "<leader>c";
-      action = "+Conform";
+      key = "<leader>u";
+      action = "+Utils";
     }
 
     {
       mode = "n";
-      key = "<leader>cf";
+      key = "<leader>uf";
       action = "<cmd>lua require('conform').format()<cr>";
       options = {
         silent = true;
         desc = "Format Buffer";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>ud";
+      action = "<cmd>lua require('neogen').generate()<cr>";
+      options = {
+        silent = true;
+        desc = "Generate python docstring";
       };
     }
 

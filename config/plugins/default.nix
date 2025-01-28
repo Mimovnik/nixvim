@@ -9,6 +9,7 @@
     ./lsp.nix
     ./lspsaga.nix
     ./lualine.nix
+    ./neogen.nix
     ./notify.nix
     ./nvim-tree.nix
     ./telescope.nix
