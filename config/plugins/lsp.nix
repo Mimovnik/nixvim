@@ -16,6 +16,8 @@
       marksman.enable = true;
 
       jsonls.enable = true;
+
+      bashls.enable = true;
     };
   };
 }
