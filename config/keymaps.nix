@@ -421,18 +421,16 @@
       key = "<leader>ud";
       action = "<cmd>lua require('neogen').generate()<cr>";
       options = {
-        silent = true;
         desc = "Generate python docstring";
       };
     }
 
-    # Terminal
     {
-      mode = "t";
-      key = "<C-x>";
-      action = "<C-\\><C-N>";
+      mode = "n";
+      key = "<leader>ug";
+      action = "<cmd>Copilot panel<cr>";
       options = {
-        desc = "Escape terminal mode";
+        desc = "Open copilot panel";
       };
     }
 
