@@ -5,7 +5,6 @@
     ./cmp.nix
     ./conform-nvim.nix
     ./copilot.nix
-    ./dap.nix
     ./git-conflict.nix
     ./lsp.nix
     ./lspsaga.nix
