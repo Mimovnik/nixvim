@@ -13,6 +13,13 @@
 
       basedpyright.enable = true;
 
+      rust_analyzer = {
+        enable = true;
+        installCargo = true;
+        installRustc = true;
+        installRustfmt = true;
+      };
+
       marksman.enable = true;
 
       jsonls.enable = true;

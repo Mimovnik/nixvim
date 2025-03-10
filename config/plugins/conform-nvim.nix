@@ -6,6 +6,7 @@
       formatters_by_ft = {
         nix = ["alejandra"];
         python = ["black" "isort"];
+        rust = ["rustfmt"];
         json = ["jq"];
         bash = [
           "shellcheck"
@@ -25,5 +26,6 @@
     shellcheck
     shellharden
     shfmt
+    rustfmt
   ];
 }
