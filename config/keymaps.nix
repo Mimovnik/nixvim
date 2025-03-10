@@ -292,43 +292,6 @@
       };
     }
 
-    # System clipboard
-    {
-      mode = ["n" "v"];
-      key = "<leader>y";
-      action = "\"+y";
-      options = {
-        desc = "Copy to system clipboard";
-      };
-    }
-
-    {
-      mode = ["n" "v"];
-      key = "<leader>Y";
-      action = "\"+Y";
-      options = {
-        desc = "Copy to system clipboard";
-      };
-    }
-
-    {
-      mode = ["n" "v"];
-      key = "<leader>p";
-      action = "\"+p";
-      options = {
-        desc = "Paste from system clipboard";
-      };
-    }
-
-    {
-      mode = ["n" "v"];
-      key = "<leader>P";
-      action = "\"+P";
-      options = {
-        desc = "Paste from system clipboard";
-      };
-    }
-
     # Delete to void register
     {
       mode = ["n" "v"];

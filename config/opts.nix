@@ -3,6 +3,9 @@
     number = true;
     relativenumber = true;
 
+    # Set clipboard to sytem one
+    clipboard = "unnamedplus";
+
     # Set tabs to 2 spaces
     tabstop = 2;
     softtabstop = 2;
