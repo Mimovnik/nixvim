@@ -29,5 +29,7 @@
     gitsigns.enable = true;
 
     luasnip.enable = true;
+
+    markdown-preview.enable = true;
   };
 }
