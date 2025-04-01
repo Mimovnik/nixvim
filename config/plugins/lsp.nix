@@ -2,7 +2,10 @@
   plugins.lsp = {
     enable = true;
     servers = {
-      clangd.enable = true;
+      clangd = {
+        enable = true;
+        extraOptions.filetypes = ["cpp" "c" "arduino"];
+      };
 
       nil_ls = {
         enable = true;

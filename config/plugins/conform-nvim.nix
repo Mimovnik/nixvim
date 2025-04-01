@@ -13,6 +13,9 @@
           "shellharden"
           "shfmt"
         ];
+        c = [ "clang-format" ];
+        cpp = [ "clang-format" ];
+        ino = [ "clang-format" ];
         "_" = ["trim_whitespace"];
       };
       default_format_opts.lsp_format = "first";
